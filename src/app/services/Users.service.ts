@@ -17,4 +17,8 @@ export class UserService {
 
     return this.db.collection('users').add(data);
   }
+
+  getById(id: string){
+    return this.db.collection('users').doc(id).get();
+  }
 }
